@@ -65,10 +65,10 @@ Example **"exp"**: gene expression profiles in cholangiocarcinoma from the genom
 
 |Samp|heterogeneity score|
 | :-----: | :-----: | 
-|TCGA-A6-2675-01A-02R-1723-07|2.954321|
-|TCGA-A6-2682-01A-01R-1410-07|4.307523|
-|TCGA-A6-2684-01A-01R-1410-07|3.916457|
-|TCGA-A6-2685-01A-01R-1410-07|2.85864|
+|TCGA-A6-2675-01A-02R-1723-07|2.9543|
+|TCGA-A6-2682-01A-01R-1410-07|4.3075|
+|TCGA-A6-2684-01A-01R-1410-07|3.9165|
+|TCGA-A6-2685-01A-01R-1410-07|2.8586|
 
 
 ## Installation
