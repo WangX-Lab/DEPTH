@@ -1,16 +1,16 @@
 # DEPTH
-DEPTH evaluates the intratumor heterogeneity level of each tumor sample based on gene expression profiles Heterogeneity score vignette
+DEPTH evaluates the intratumor heterogeneity (ITH) level of each tumor sample based on gene expression profiles
 
 Cite the code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4094813.svg)](https://doi.org/10.5281/zenodo.3968541)
 
 # DEPTH
 
-DEPTH evaluates the tumor heterogeneity level of each tumor sample based on gene expression profiles Heterogeneity score vignette
+DEPTH evaluates the ITH level of each tumor sample based on its gene expression profiles
 
 
 ## Description
 
-This vignette shows an example of how to use the DEPTH algorithm to calculate tumor heterogeneity level in R. 
+This vignette shows an example of how to use the DEPTH algorithm to calculate the ITH score in R. 
 
 DEPTH evaluates the tumor heterogeneity level of each tumor sample based on gene expression profiles.
 
