@@ -12,7 +12,7 @@ DEPTH evaluates the ITH level of each tumor sample based on its gene expression 
 
 This vignette shows an example of how to use the DEPTH algorithm to calculate the ITH score in R. 
 
-DEPTH evaluates the tumor heterogeneity level of each tumor sample based on gene expression profiles.
+DEPTH is an algorithm to score ITH at the mRNA level.
 
 
 ## Details
