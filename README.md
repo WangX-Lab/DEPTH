@@ -63,7 +63,7 @@ Example **"exp"**: gene expression profiles in cholangiocarcinoma from the genom
 
  Table 3. ITH score of tumor samples in output data 
 
-|Samp|ITH score|
+|Sample|ITH score|
 | :-----: | :-----: | 
 |TCGA-A6-2675-01A-02R-1723-07|2.9543|
 |TCGA-A6-2682-01A-01R-1410-07|4.3075|
