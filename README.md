@@ -94,4 +94,4 @@ DEPTH(exp, match)
 
 ## Citation
 
-Li, Mengyuan, Zhang, Zhilan, Li, Lin, & Wang, Xiaosheng (2020). An algorithm to quantify intratumor heterogeneity based on alterations of gene expression profiles. Communications biology, 3(1), 505. https://doi.org/10.1038/s42003-020-01230-7
+Mengyuan Li, Zhilan Zhang, Lin Li, Xiaosheng Wang. An algorithm to quantify intratumor heterogeneity based on alterations of gene expression profiles. Communications biology 2020, 3(1), 505. DOI: https://doi.org/10.1038/s42003-020-01230-7.
