@@ -19,12 +19,12 @@ DEPTH evaluates the tumor heterogeneity level of each tumor sample based on gene
 
 ### Input Two files need to be input into the DEPTH function: 
 
-1) **exp:** gene expression profiles in both tumor and normal samples (microarray or RNA-Seq data, normalized);    
+1) **exp:** gene expression profiles in both tumor and normal samples (microarray or RNA-Seq data, normalized). **Note**: when reading the input file, please set "header = FALSE".   
 
 
                                   Table 1. RNA expression of input data
 
-|Identification|TCGA-A6-2671-11A-01R-A32Z-07|TCGA-A6-2675-11A-01R-1723-07|TCGA-A6-2675-01A-02R-1723-07|
+||TCGA-A6-2671-11A-01R-A32Z-07|TCGA-A6-2675-11A-01R-1723-07|TCGA-A6-2675-01A-02R-1723-07|
 | :-----: | :------: | :------: | :-----: |
 | SKAP1 |  6.22  |  4.36  |  6.00 |
 |TPSB2|9.39|9.45|9.21|
@@ -39,10 +39,10 @@ DEPTH evaluates the tumor heterogeneity level of each tumor sample based on gene
 |STRA6|2.26|1.08|6.57|
 
 
-2) **match**: sample type ("tumor" or "normal") in "exp".   
+2) **match**: sample type ("tumor" or "normal") in "exp". **Note**: when normal controls are not available, please change "Normal" into "Tumor", namely, all values in the "state" column are "Tumor". 
  
  
- Table2. Identification of tumor sample and normal sample 
+ Table2. Identification of tumor and normal samples 
 
 |State|Identification|
 | :-----: | :-----: | 
