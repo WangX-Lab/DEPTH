@@ -17,12 +17,12 @@ DEPTH is an algorithm to score ITH at the mRNA level.
 
 ## Details
 
-### Input Two files need to be input into the DEPTH function: 
+### Input: two files needed for the DEPTH function: 
 
 1) **exp:** gene expression profiles in both tumor and normal samples (microarray or RNA-Seq data, normalized). **Note**: when reading the input file, please set "header = FALSE".   
 
 
-                                  Table 1. RNA expression of input data
+                                  Table 1. mRNA expression of input data
 
 ||TCGA-A6-2671-11A-01R-A32Z-07|TCGA-A6-2675-11A-01R-1723-07|TCGA-A6-2675-01A-02R-1723-07|
 | :-----: | :------: | :------: | :-----: |
@@ -56,12 +56,12 @@ DEPTH is an algorithm to score ITH at the mRNA level.
 |Tumor|TCGA-A6-2682-01A-01R-1410-07|
 
 
-**Table 1** is an example of **"exp"** and **Table 2** is an example of **"match"**.  
+**Table 1** is an example of **"exp"**, and **Table 2** is an example of **"match"**.  
 
-Example **"exp"**: gene expression profiles in cholangiocarcinoma from the genomic data commons data portal (https://portal.gdc.cancer.gov/). There are 45 samples (36 tumor and 9 normal samples) and 20,531 genes in **"exp"**. The DEPTH function will output the heterogeneity score for each of the 36 tumor samples as shown in **Table 3**.  
+Example **"exp"**: gene expression profiles in cholangiocarcinoma from the genomic data commons data portal (https://portal.gdc.cancer.gov/). There are 45 samples (36 tumor and 9 normal samples) and 20,531 genes in **"exp"**. The DEPTH function will output the ITH score for each of the 36 tumor samples as shown in **Table 3**.  
 
 
- Table 3. heterogeneity score of tumor samples in output data 
+ Table 3. ITH score of tumor samples in output data 
 
 |Samp|heterogeneity score|
 | :-----: | :-----: | 
@@ -72,7 +72,7 @@ Example **"exp"**: gene expression profiles in cholangiocarcinoma from the genom
 
 
 ## Installation
-You can install the released version of ‘DEPTH’ with:
+Users can install the released version of ‘DEPTH’ with:
 
 ```  
 if (!requireNamespace("devtools", quietly = TRUE))
@@ -81,7 +81,7 @@ if (!requireNamespace("devtools", quietly = TRUE))
 devtools::install_github("WangX-Lab/DEPTH/DEPTH")
 ```
 
-## Examples
+## Example
 
 ```  
 exp=read.csv("DEPTH/exp.csv",header=F)
