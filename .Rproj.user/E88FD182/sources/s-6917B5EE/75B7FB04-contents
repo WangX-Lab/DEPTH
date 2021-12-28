@@ -1,0 +1,12 @@
+library(roxygen2)
+devtools::document()
+roxygenize("F:/Packages/DEPTH/")
+
+devtools::check()
+
+devtools::build("F:/Packages/DEPTH")
+
+devtools::install()
+
+
+library(DEPTH)
