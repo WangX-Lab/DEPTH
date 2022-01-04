@@ -1,7 +1,7 @@
 Package: DEPTH
 Type: Package
 Title: Tumor heterogeneity level evaluation
-Version: 0.99.2
+Version: 0.99.6
 Author: Xiaosheng Wang
 Maintainer: Xiaosheng Wang <xiaosheng.wang@cpu.edu.cn>
 Description: This package shows a DEPTH algorithm to calculate tumor heterogeneity level in R.
