@@ -19,7 +19,7 @@ DEPTH is an algorithm to score ITH at the mRNA level.
 
 ### Input: two files needed for the DEPTH function: 
 
-1) **exp:** gene expression profiles in tumor and/or normal samples (microarray or RNA-Seq data, normalized). **Note**: when reading the input file, please set "header = FALSE".   
+1) **exp:** gene expression profiles in tumor and/or normal samples (microarray or RNA-Seq data, normalized). **Note**: when reading the input file, please set "row.names=1".   
 
 
                                   Table 1. mRNA expression of input data
