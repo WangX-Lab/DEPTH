@@ -46,14 +46,14 @@ DEPTH is an algorithm to score ITH at the mRNA level.
 
 |State|Identification|
 | :-----: | :-----: | 
-|Normal|TCGA-A6-2671-11A-01R-A32Z-07|
-|Normal|TCGA-A6-2675-11A-01R-1723-07|
-|Tumor|TCGA-A6-2675-01A-02R-1723-07|
-|Normal|TCGA-A6-2678-11A-01R-A32Z-07|
-|Normal|TCGA-A6-2679-11A-01R-A32Z-07|
-|Normal|TCGA-A6-2680-11A-01R-A32Z-07|
-|Normal|TCGA-A6-2682-11A-01R-A32Z-07|
-|Tumor|TCGA-A6-2682-01A-01R-1410-07|
+|TCGA-A6-2671-11A-01R-A32Z-07|Normal
+|TCGA-A6-2675-11A-01R-1723-07|Normal
+|TCGA-A6-2675-01A-02R-1723-07|Normal
+|TCGA-A6-2678-11A-01R-A32Z-07|Normal
+|TCGA-A6-2679-11A-01R-A32Z-07|Normal
+|TCGA-A6-2680-11A-01R-A32Z-07|Normal
+|TCGA-A6-2682-11A-01R-A32Z-07|Normal
+|TCGA-A6-2682-01A-01R-1410-07|Tumor
 
 
 **Table 1** is an example of **"exp"**, and **Table 2** is an example of **"match"**.  

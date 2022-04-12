@@ -21,46 +21,42 @@
 #' @author Xiaosheng Wang <xiaosheng.wang@@cpu.edu.cn>
 DEPTH <- function(exp, match)
 {#Two files need to be input into this function.
-  exp <- as.matrix(exp);
-  gene <- exp[-1, 1];
-  samp <- exp[1, -1];
-  exp <- as.matrix(exp[-1, -1]);
-  colnames(exp) <- samp;
-  rownames(exp) <- gene;
-  match <- as.matrix(match);
-  #Pick up normal samples.
-  nor_pos <- which(samp %in% match[which(match[, 2] == "Normal"), 1])
-  #Pick up tumor samples.
-  tum_pos <- which(samp %in% match[which(match[, 2] == "Tumor"), 1])
-  exp_tum <- exp[, tum_pos]; samp_tum <- samp[tum_pos];
-  score <- matrix(0, nrow <- dim(exp_tum)[1], ncol <- dim(exp_tum)[2])
+  exp<-as.data.frame(exp)
+  match <- as.data.frame(match)
 
-  if(length(nor_pos) > 0){
-    nor <- c();
-    for(j in 1:dim(exp)[1]){
-      nor[j] <- mean(as.numeric(exp[j, nor_pos]))
-    }#Caculate the average values of each gene in normal sample.
-    #Caculate the heterogeneity score of each gene.
-    for(s in 1 : dim(exp_tum)[1]){
-      for(u in 1 : dim(exp_tum)[2]){
-        score[s, u] <- (as.numeric(exp_tum[s, u]) - as.numeric(nor[s]))^2
-      }
+  pos_nor <- which(colnames(exp) %in% match[which(match[, 2] == "Normal"), 1])
+  pos_dis <- which(colnames(exp) %in% match[which(match[, 2] == "Tumor"), 1])
+
+  exp_nor <- exp[, pos_nor]
+  exp_dis <- exp[, pos_dis]
+
+  #Caculate the average values of each gene in normal/disease sample.
+  mean_nor <- as.data.frame(rowMeans(exp_nor,na.rm=T))
+  mean_dis <- as.data.frame(rowMeans(exp_dis,na.rm=T))
+
+  score <- as.data.frame(matrix(0, nrow <- dim(exp_dis)[1], ncol <- dim(exp_dis)[2]))
+  #Caculate the heterogeneity score of each gene.
+  if(length(pos_nor) > 0){
+    for(u in 1 : dim(exp_dis)[2]){
+      score[,u] <- (exp_dis[,u] - mean_nor[,1])^2
     }
-  }else if(length(nor_pos)==0){
-    for(s in 1 : dim(exp_tum)[1]){
-      for(u in 1 : dim(exp_tum)[2]){
-        score[s, u] <- (as.numeric(exp_tum[s, u]) - mean(as.numeric(exp_tum[s, ])))^2
-      }
+  }else if(length(pos_nor) == 0){
+    for(u in 1 : dim(exp_dis)[2]){
+      score[,u] <- (exp_dis[,u] - mean_dis[,1])^2
     }
   }
-  colnames(score) <- samp_tum; rownames(score) <- gene;
-  heterogeneity_score <- c();
-  for(z in 1:length(samp_tum)){
-    heterogeneity_score[z] <- sd(as.numeric(score[, z]))
+
+  colnames(score) <- colnames(exp_dis)
+  rownames(score) <- rownames(exp_dis)
+
+  heterogeneity_score <- c()
+
+  for(z in 1:length(colnames(exp_dis))){
+    heterogeneity_score[z] <- sd(score[, z],na.rm=T)
   }
-  heterogeneity_score <- cbind(samp_tum, heterogeneity_score);
-  #caculate the heterogeneity score of each sample.
-  colnames(heterogeneity_score) <- c("sample", "heterogeneity score")
+  heterogeneity_score <- cbind(colnames(exp_dis), heterogeneity_score)
+  #Caculate the heterogeneity score of each sample.
+  colnames(heterogeneity_score) <- c("Sample", "ITH score")
   #DEPTH function will output the heterogeneity score of each tumor sample.
   return(heterogeneity_score)
 }
