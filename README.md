@@ -102,11 +102,3 @@ DEPTH(mRNA_exp, stype)
 ### Contact
 
 E-mail any questions to Xiaosheng Wang <<xiaosheng.wang@cpu.edu.cn>>
-## Citation
-
-1. Mengyuan Li, Zhilan Zhang, Lin Li, Xiaosheng Wang. An algorithm to quantify intratumor heterogeneity based on alterations of gene expression profiles. Communications Biology 2020, 3(1), 505. DOI: https://doi.org/10.1038/s42003-020-01230-7.
-2. Li, M., Zhang, Z., Li, L. et al. Author Correction: An algorithm to quantify intratumor heterogeneity based on alterations of gene expression profiles. Commun Biol 5, 323 (2022). https://doi.org/10.1038/s42003-022-03285-0.
-
-### Contact
-
-E-mail any questions to Xiaosheng Wang <<xiaosheng.wang@cpu.edu.cn>>
